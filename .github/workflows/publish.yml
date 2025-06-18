@@ -1,4 +1,4 @@
-name: Upload artifact and conditionally upload distribution to GitHub Releases and the JetBrains Marketplace
+name: Upload artifact and conditionally upload distribution to GitHub Releases
 
 on: push
 
@@ -39,7 +39,7 @@ jobs:
       - name: Get distribution
         run: cp build/distributions/*.zip .
       - name: Upload Artifact
-        uses: actions/upload-artifact@v3
+        uses: actions/upload-artifact@v4
         with:
           name: 'Kanagawa Theme Distribution'
           path: '*.zip'
